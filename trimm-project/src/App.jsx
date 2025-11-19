@@ -1,5 +1,6 @@
-import { Routes, Route, Link } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 import Home from "./pages/home.jsx";
+import Login from "./pages/Login.jsx";
 
 function App() {
   return (
@@ -12,12 +13,15 @@ function App() {
         <Link to="/about" className="text-blue-600 font-medium hover:underline">
           About
         </Link>
+        <Link to="/Login" className="text-blue-600 font-medium hover:underline">
+          Login
+        </Link>
       </nav>
 
       {/* Rotas */}
       <Routes>
         <Route path="/" element={<Home />} />
-    
+        <Route path="/Login" element={<Login />} />
       </Routes>
     </div>
   );
