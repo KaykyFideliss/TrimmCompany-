@@ -8,8 +8,8 @@
   @apply w-full max-w-sm bg-white rounded-2xl shadow-xl p-8;
 }
 
-title {
-  @apply text-3xl font-semibold text-trimmBarber-800 text-center;
+.title {
+  @apply text-3xl font-semibold text-trimmBarber-500 text-center mb-6;
 }
 
 .subtitle {
