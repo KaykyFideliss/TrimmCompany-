@@ -2,6 +2,9 @@ import React from 'react';
 import { ArrowRight, CheckCircle, Zap, Shield, BarChart } from 'lucide-react';
 
 
+
+
+
 const home = () => {
   return (
     <div className="font-sans text-gray-900">

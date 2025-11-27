@@ -1,0 +1,53 @@
+/* Estilos separados para a página de Login do Trimm */
+
+.container {
+  @apply min-h-screen flex items-center justify-center bg-trimmBarber-100 p-4;
+}
+
+.card {
+  @apply w-full max-w-sm bg-white rounded-2xl shadow-xl p-8;
+}
+
+.title {
+  @apply text-3xl font-semibold text-trimmBarber-500 text-center mb-6;
+}
+
+.subtitle {
+  @apply text-2xl font-semibold text-trimmBarber-900 text-center;
+}
+
+.description {
+  @apply text-sm text-trimmBarber-600 text-center mt-1;
+}
+
+.inputField {
+  @apply w-full px-4 py-2 rounded-lg bg-trimmBarber-50 text-trimmBarber-900 border border-trimmBarber-200 focus:ring-2 focus:ring-trimmBarber-400 focus:outline-none;
+}
+
+.loginButton {
+  @apply w-full py-2 rounded-lg bg-trimmBarber-gold text-white font-semibold hover:bg-trimmBarber-goldDark transition;
+}
+
+.dividerContainer {
+  @apply my-4 flex items-center justify-center gap-4;
+}
+
+.dividerLine {
+  @apply w-1/3 h-px bg-trimmBarber-300;
+}
+
+.dividerText {
+  @apply text-trimmBarber-600 text-sm whitespace-nowrap;
+}
+
+.oauthButton {
+  @apply w-full py-2 rounded-lg border border-trimmBarber-300 flex items-center justify-center gap-3 hover:bg-trimmBarber-100 transition;
+}
+
+.footerText {
+  @apply text-center text-sm text-trimmBarber-700 mt-6;
+}
+
+.footerLink {
+  @apply text-trimmBarber-900 font-semibold underline;
+}
