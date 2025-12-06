@@ -1,27 +1,18 @@
 import { Link, Route, Routes } from "react-router-dom";
-import Home from "./pages/home.jsx";
+import Home from "./pages/Home.jsx";
 import Login from "./pages/Login.jsx";
-
+import First from "./pages/First.jsx";
+import Navbar from "./components/Navbar.jsx";
 function App() {
   return (
-    <div className="min-h-screen bg-gray-100 p-6">
-      {/* Navbar simples de exemplo */}
-      <nav className="flex gap-6 mb-10 border-b pb-3">
-        <Link to="/" className="text-blue-600 font-medium hover:underline">
-          Home
-        </Link>
-        <Link to="/about" className="text-blue-600 font-medium hover:underline">
-          About
-        </Link>
-        <Link to="/Login" className="text-blue-600 font-medium hover:underline">
-          Login
-        </Link>
-      </nav>
-
+   
+    <div>
       {/* Rotas */}
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<First />} />
+        <Route path="/Home" element={<Home />} />
         <Route path="/Login" element={<Login />} />
+        <Route path="/Navbar" element={<Navbar />} />
       </Routes>
     </div>
   );
