@@ -1,23 +1,18 @@
 import { Routes, Route, Link } from "react-router-dom";
 import Home from "./pages/home.jsx";
-
+import Planos from "./pages/planos.jsx";
+import Marketplace from "./pages/marketplace.jsx";
+import Sobre from "./pages/sobre.jsx";
 function App() {
   return (
-    <div className="min-h-screen bg-gray-100 p-6">
-      {/* Navbar simples de exemplo */}
-      <nav className="flex gap-6 mb-10 border-b pb-3">
-        <Link to="/" className="text-blue-600 font-medium hover:underline">
-          Home
-        </Link>
-        <Link to="/about" className="text-blue-600 font-medium hover:underline">
-          About
-        </Link>
-      </nav>
-
+    <div>
+      
       {/* Rotas */}
       <Routes>
         <Route path="/" element={<Home />} />
-    
+        <Route path="/planos" element={<Planos />} />
+        <Route path="/marketplace" element={<Marketplace />} />
+        <Route path="/sobre" element={<Sobre />} />
       </Routes>
     </div>
   );
