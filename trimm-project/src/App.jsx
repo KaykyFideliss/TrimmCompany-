@@ -12,11 +12,13 @@ function App() {
 
   return (
     <div className="min-h-screen bg-dust-50 dark:bg-homem-1000 transition-colors duration-300">
-      {/* Navbar recebe darkMode via props */}
-      <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
-
+     
+ {/* Navbar recebe darkMode via props */}
+      <Navbar className='z-10' darkMode={darkMode} setDarkMode={setDarkMode} />
       {/* Rotas */}
+      
       <Routes>
+        
         <Route path="/" element={<First />} />
         <Route path="/home" element={<Home />} />
         <Route path="/planos" element={<Planos />} />

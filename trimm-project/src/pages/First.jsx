@@ -10,7 +10,7 @@ const First = () => {
   };
 
   return (
-    <section className="w-full h-screen flex flex-col">
+    <section className="w-full fixed h-screen flex flex-col z-999">
       <div className="flex-1 flex items-center justify-center">
         <TextHoverEffect 
           className="flex items-center justify-center"
