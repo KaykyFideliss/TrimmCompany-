@@ -8,7 +8,7 @@ import Rodape from '../components/Footer';
 
 export default function Home() {
   return (
-    <div className="min-h-screen font-sans text-dust-900 dark:bg-mulher-700 transition-colors duration-300"> 
+    <div className="min-h-screen font-sans text-dust-900 dark:bg-homem-1000 transition-colors duration-300"> 
       <Navbar /> 
       <main>
         <Hero />

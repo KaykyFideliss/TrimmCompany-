@@ -20,33 +20,33 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
         <a href="/Home" className="flex items-center gap-2 transition-opacity hover:scale-105">
-          <span className="text-xl font-bold tracking-tight text-dust-900 dark:text-white font-poppins">fivonn</span>
+          <span className="text-xl font-bold tracking-tight text-dust-900 dark:text-white font-display">fivonn</span>
         </a>
 
         {/* Menu Desktop */}
-        <div className="hidden md:flex items-center gap-8 text-sm font-medium text-dust-600 dark:text-gray-300">
-          <a href="/solucoes" className="hover:text-ocean-500 transition-colors hover:scale-105 font-poppins">Soluções</a>
-          <a href="/marketplace" className="hover:text-ocean-500 transition-colors hover:scale-105 font-poppins">Marketplace</a>
-          <a href="/planos" className="hover:text-ocean-500 transition-colors hover:scale-105 font-poppins">Planos</a>
-          <a href="/sobre" className="hover:text-ocean-500 transition-colors hover:scale-105 font-poppins">Sobre</a>
+        <div className="hidden md:flex items-center gap-8 text-sm font-medium text-dust-600  dark:text-gray-300">
+          <a href="/solucoes" className="hover:text-ocean-500 transition-colors hover:scale-105 hover:text-homem-400 font-poppins">Soluções</a>
+          <a href="/marketplace" className="hover:text-ocean-500 transition-colors hover:scale-105 font-poppins hover:text-homem-400">Marketplace</a>
+          <a href="/planos" className="hover:text-ocean-500 transition-colors hover:scale-105 font-poppins hover:text-homem-400">Planos</a>
+          <a href="/sobre" className="hover:text-ocean-500 transition-colors hover:scale-105 font-poppins hover:text-homem-400">Sobre</a>
         </div>
 
         {/* Search + Buttons Desktop */}
         <div className="hidden md:flex items-center gap-4">
              <Button
             variant="outline"
-            className="py-2 h-9 flex items-center justify-center"
+            className="py-2 h-9 flex items-center justify-center hover:scale-105"
             onClick={() => setDarkMode(!darkMode)}
           >
-            {darkMode ? <FaSun size={20} /> : <MdDarkMode size={20} />}
+            {darkMode ? <FaSun size={20} className='text-homem-400' /> : <MdDarkMode  className='text-homem-400' size={20} />}
           </Button>
 
-          <Button variant="primary" className="py-2 h-9">Criar Conta</Button>
+          <Button variant="primary" className="py-2 h-9 font-display bg-homem-400 hover:scale-105">Criar Conta</Button>
         </div>
 
         {/* Hamburger Menu Mobile */}
-        <div className="md:hidden flex items-center gap-2">
-          <button onClick={() => setDarkMode(!darkMode)} className="focus:outline-none">
+        <div className="md:hidden flex items-center gap-2 ">
+          <button onClick={() => setDarkMode(!darkMode)} className="focus:outline-none ">
             {darkMode ? <FaSun size={20} /> : <MdDarkMode size={20} />}
           </button>
           <button onClick={() => setIsOpen(!isOpen)} className="focus:outline-none">
@@ -62,7 +62,7 @@ export default function Navbar() {
               ) : (
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
               )}
-            </svg>
+            </svg>  
           </button>
         </div>
       </div>

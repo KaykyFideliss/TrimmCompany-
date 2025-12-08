@@ -11,6 +11,13 @@
 	padding: 0px;
 }
 
+
+   body {
+    @apply bg-gray-50 text-gray-900 transition-colors duration-300 overflow-x-hidden;
+
+
+}
+
 /* Navbar styles for Header component (modern look) */
 header nav {
 	display: flex;
@@ -80,7 +87,4 @@ header nav button:focus {
 
 
 
-body {
-    @apply bg-dust-50 text-dust-900 transition-colors duration-300 overflow-x-hidden;
-}
 
