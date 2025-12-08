@@ -13,7 +13,7 @@ export const TextHoverEffect = ({
   const [maskPosition, setMaskPosition] = useState({ cx: "50%", cy: "50%" });
   const [index, setIndex] = useState(0);
 
-  const switchDelay = 2200; // tempo total entre cada palavra
+  const switchDelay = 1100; // tempo total entre cada palavra
   const drawDuration = 1.4; // tempo do stroke
   const strokeLength = 1200;
 

@@ -22,11 +22,11 @@ export default function Hero() {
             Plataforma All-in-One
           </div>
           
-          <h1 className="text-6xl md:text-8xl font-display font-semibold tracking-tighter leading-[0.95] text-dust-900 dark:text-white mb-8">
+          <h1 className="text-6xl md:text-8xl font-display font-semibold tracking-tighter leading-[0.95] text-homem-1000 dark:text-white mb-8">
             <RevealText delay={0}>Fivonn</RevealText> <br />
             <RevealText  delay={0.1}>Barber</RevealText> <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-ocean-500 to-indigo-600">
-              <RevealText delay={0.2}>Reimagined.</RevealText>
+            <span className=" bg-clip-text bg-gradient-to-r from-ocean-500 to-indigo-600">
+              <RevealText delay={0.2} className="text-homem-1000 dark:text-white " >and Salon</RevealText>
             </span>
           </h1>
           
@@ -46,8 +46,9 @@ export default function Hero() {
         {/* Visual Element Parallax (Mantido) */}
         <motion.div style={{ y: yParallax }} className="relative h-[500px] lg:h-[600px] w-full hidden lg:block perspective-1000">
            <div className="absolute top-0 right-0 w-3/4 h-3/4 bg-dust-200 dark:bg-dust-800 rounded-3xl overflow-hidden shadow-2xl rotate-3 transition-transform hover:rotate-0 duration-500">
+              
               <img 
-                src="" 
+                src="img/barber-hero.png" 
                 alt="Barber working" 
                 className="w-full h-full object-cover opacity-90 mix-blend-multiply dark:mix-blend-normal dark:opacity-70 grayscale hover:grayscale-0 transition-all duration-700"
               />
@@ -58,12 +59,12 @@ export default function Hero() {
              initial={{ x: -50, opacity: 0 }}
              animate={{ x: 0, opacity: 1 }}
              transition={{ delay: 0.5 }}
-             className="absolute bottom-10 left-0 w-2/3 bg-white dark:bg-dust-900 p-6 rounded-2xl shadow-xl border border-dust-100 dark:border-dust-800 backdrop-blur-sm"
+             className="absolute bottom-10 left-0 w-2/3 bg-white dark:bg-dust-900 p-6 rounded-2xl shadow-xl border border-dust-100 dark:border-white/20 backdrop-blur-sm"
            >
-              <div className="flex justify-between items-center mb-4">
+              <div className="flex justify-between items-center mb-4 font-display">
                  <div>
                     <h3 className="font-bold text-dust-900 dark:text-white">Receita Mensal</h3>
-                    <p className="text-xs text-dust-500">IA Analytics • Dezembro</p>
+                    <p className="text-xs text-dust-500  ">IA Analytics • Dezembro</p>
                  </div>
                  <div className="px-2 py-1 bg-emerald-500/10 text-emerald-500 rounded text-sm font-bold">+24%</div>
               </div>
@@ -75,7 +76,7 @@ export default function Hero() {
                       whileInView={{ height: `${h}%` }}
                       viewport={{ once: true }}
                       transition={{ delay: 0.6 + (i * 0.05), type: "spring" }}
-                      className={`flex-1 rounded-t-sm ${i % 2 === 0 ? 'bg-ocean-500' : 'bg-petal-500'} opacity-80`} 
+                      className={`flex-1 rounded-t-sm ${i % 2 === 0 ? 'bg-ocean-500' : 'bg-mulher-400'} opacity-80`} 
                     />
                  ))}
               </div>

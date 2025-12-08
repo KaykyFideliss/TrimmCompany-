@@ -5,7 +5,7 @@ import { Logo } from './UiComponents';
 export default function Rodape() { 
   return (
     // LIGHT MODE ONLY
-    <footer className="bg-dust-50 pt-20 pb-10 border-t border-dust-200 transition-colors duration-300">
+    <footer className="bg-dust-50 dark:bg-homem-1000 pt-20 pb-10 border-t transition-colors duration-300">
       
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-5 gap-10 mb-16">
         {/* ... (Logo e Descrição) ... */}

@@ -9,10 +9,10 @@ export default function FeaturesGrid() {
     <section className="py-24 transition-colors duration-300"> 
       
       {}
-      <div className="max-w-7xl mx-auto px-6"> 
-         <div className="mb-16 md:w-2/3">
-           <h2 className="text-3xl md:text-4xl font-display font-bold mb-6 text-dust-900 dark:text-white">Tecnologia que impulsiona beleza.</h2>
-           <p className="text-dust-500 text-lg">De inteligência artificial a dropshipping integrado. O Fivonn não é apenas uma agenda, é o sistema operacional do seu negócio.</p>
+      <div className="max-w-7xl  mx-auto px-6"> 
+         <div className="mb-16 md:w-full px-6">
+           <h2 className="text-3xl md:text-5xl font-display font-bold text-center text-dust-900 dark:text-white mb-4">Tecnologia que impulsiona beleza.</h2>
+           <p className="text-dust-500 text-center text-lg">De inteligência artificial a dropshipping integrado. O Fivonn não é apenas uma agenda, é o sistema operacional do seu negócio.</p>
          </div>
   
          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
