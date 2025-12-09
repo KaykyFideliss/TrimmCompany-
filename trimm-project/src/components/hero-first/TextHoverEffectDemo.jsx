@@ -111,7 +111,7 @@ export const TextHoverEffect = ({
         textAnchor="middle"
         dominantBaseline="middle"
         strokeWidth="0.3"
-        className="fill-transparent stroke-neutral-700 dark:stroke-neutral-800 font-[helvetica] text-[55px] font-bold opacity-40"
+        className="fill-transparent stroke-neutral-700 dark:stroke-dust-100 font-[helvetica] text-[55px] font-bold opacity-40"
       >
         {words[index]}
       </text>
@@ -123,7 +123,7 @@ export const TextHoverEffect = ({
         y="50%"
         textAnchor="middle"
         dominantBaseline="middle"
-        className="fill-transparent stroke-neutral-700 dark:stroke-neutral-900 font-[helvetica] text-[55px] font-bold"
+        className="fill-transparent stroke-neutral-700 dark:stroke-dust-100 font-[helvetica] text-[55px] font-bold"
         strokeWidth={0.35}
         initial={{ strokeDasharray: strokeLength, strokeDashoffset: strokeLength }}
         animate={{ strokeDashoffset: 0 }}
