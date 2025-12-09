@@ -3,7 +3,7 @@ import React, { useRef, useEffect, useState } from "react";
 import { motion } from "motion/react";
 
 export const TextHoverEffect = ({
-  words = ["Bem vindo", "ao", "FIVON"],
+  words = ["Bem vindo", "ao", "FIVONN"],
   duration = 0,
   onFinish,
   className,
