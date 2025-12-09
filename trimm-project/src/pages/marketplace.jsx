@@ -1,7 +1,6 @@
 // src/pages/Marketplace.jsx
 import React from 'react';
 import { MapPin, Search, SlidersHorizontal, Star } from 'lucide-react';
-import Navbar from '../components/Navbar';
 import Rodape from '../components/Footer'; 
 
 // Dados de exemplo para simular profissionais (como viriam do Supabase)
@@ -46,7 +45,7 @@ export default function Marketplace() {
 
     return (
         <div className="min-h-screen font-sans text-dust-900 transition-colors duration-300"> 
-           <Navbar /> 
+        
            
            <main className="pt-24 bg-dust-50 min-h-[calc(100vh-100px)]">
               <div className="max-w-7xl mx-auto px-6 py-12">

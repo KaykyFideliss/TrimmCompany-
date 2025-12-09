@@ -13,9 +13,9 @@ export const TextHoverEffect = ({
   const [maskPosition, setMaskPosition] = useState({ cx: "50%", cy: "50%" });
   const [index, setIndex] = useState(0);
 
-  const switchDelay = 1100; // tempo total entre cada palavra
-  const drawDuration = 1.4; // tempo do stroke
-  const strokeLength = 1200;
+ const switchDelay = 1800;  // 🔥 tempo total entre cada palavra (mais rápido)
+const drawDuration = 1.5;  // 🔥 tempo da animação de stroke (mais curto)
+const strokeLength = 1200;
 
   /** ----------------------
    * 🔥 SISTEMA DE TROCA DE PALAVRA (100% CORRIGIDO)
@@ -92,31 +92,39 @@ export const TextHoverEffect = ({
       {/* ---------------------- */}
       {/* GRADIENTES E MÁSCARA */}
       {/* ---------------------- */}
-      <defs>
-        <linearGradient id="textGradient" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stopColor="#eab308" />
-          <stop offset="25%" stopColor="#ef4444" />
-          <stop offset="50%" stopColor="#3b82f6" />
-          <stop offset="75%" stopColor="#06b6d4" />
-          <stop offset="100%" stopColor="#8b5cf6" />
-        </linearGradient>
+     <defs>
+  <linearGradient id="textGradient" gradientUnits="userSpaceOnUse">
+    <stop offset="0%" stopColor="#eab308" />
+    <stop offset="25%" stopColor="#ef4444" />
+    <stop offset="50%" stopColor="#3b82f6" />
+    <stop offset="75%" stopColor="#06b6d4" />
+    <stop offset="100%" stopColor="#8b5cf6" />
+  </linearGradient>
 
-        <motion.radialGradient
-          id="revealMask"
-          gradientUnits="userSpaceOnUse"
-          r="20%"
-          initial={{ cx: "50%", cy: "50%" }}
-          animate={maskPosition}
-          transition={{ duration: duration ?? 0, ease: "easeOut" }}
-        >
-          <stop offset="0%" stopColor="white" />
-          <stop offset="100%" stopColor="black" />
-        </motion.radialGradient>
+  <radialGradient
+    id="revealMask"
+    gradientUnits="userSpaceOnUse"
+    cx={maskPosition.cx}
+    cy={maskPosition.cy}
+    r="20%"
+  >
+    <stop offset="0%" stopColor="white" />
+    <stop offset="100%" stopColor="black" />
+  </radialGradient>
 
-        <mask id="textMask">
-          <rect x="0" y="0" width="100%" height="100%" fill="url(#revealMask)" />
-        </mask>
-      </defs>
+  <mask id="textMask">
+    <motion.rect
+      x="0"
+      y="0"
+      width="100%"
+      height="100%"
+      fill="url(#revealMask)"
+      animate={maskPosition}
+      transition={{ duration: duration ?? 0.3, ease: "easeOut" }}
+    />
+  </mask>
+</defs>
+
 
       {/* ---------------------- */}
       {/* SOMBRA LEVE NO HOVER */}

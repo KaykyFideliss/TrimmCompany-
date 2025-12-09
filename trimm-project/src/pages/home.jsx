@@ -1,5 +1,4 @@
 import React from 'react';
-import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import FeatureTabs from '../components/FeatureTabs';
 import FeaturesGrid from '../components/FeaturesGrid';
@@ -9,7 +8,7 @@ import Rodape from '../components/Footer';
 export default function Home() {
   return (
     <div className="min-h-screen font-sans text-dust-900 dark:bg-homem-1000 transition-colors duration-300"> 
-      <Navbar /> 
+    
       <main>
         <Hero />
         <FeatureTabs />

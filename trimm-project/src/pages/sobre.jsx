@@ -1,7 +1,6 @@
 
 import React from 'react';
 import { Zap, Target, Heart } from 'lucide-react';
-import Navbar from '../components/Navbar';
 import Rodape from '../components/Footer'; 
 import Cta from '../components/Cta';
 import { Button } from '../components/UiComponents';
@@ -16,7 +15,7 @@ const mva = [
 export default function Sobre() {
   return (
     <div className="min-h-screen font-sans text-dust-900 transition-colors duration-300"> 
-       <Navbar /> 
+       
        
        <main className="pt-24">
           
