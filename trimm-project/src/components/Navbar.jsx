@@ -4,6 +4,7 @@ import { Button } from './UiComponents';
 import { MdDarkMode } from "react-icons/md";
 import { FaSun } from "react-icons/fa";
 import useDarkMode from '../hooks/useDarkMode'; // import do hook
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,16 +20,16 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
-        <a href="/Home" className="flex items-center gap-2 transition-opacity hover:scale-105">
+        <Link to="/home" className="flex items-center gap-2 transition-opacity hover:scale-105">
           <span className="text-xl font-bold tracking-tight text-dust-900 dark:text-white font-display">fivonn</span>
-        </a>
+        </Link>
 
         {/* Menu Desktop */}
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-dust-600  dark:text-gray-300">
-          <a href="/solucoes" className="hover:text-ocean-500 transition-colors hover:scale-105 font-poppins">Soluções</a>
-          <a href="/marketplace" className="hover:text-ocean-500 transition-colors hover:scale-105 font-poppins">Marketplace</a>
-          <a href="/planos" className="hover:text-ocean-500 transition-colors hover:scale-105 font-poppins">Planos</a>
-          <a href="/sobre" className="hover:text-ocean-500 transition-colors hover:scale-105 font-poppins">Sobre</a>
+          <Link to="/solucoes" className="hover:text-ocean-500 transition-colors hover:scale-105 font-poppins">Soluções</Link>
+          <Link to="/marketplace" className="hover:text-ocean-500 transition-colors hover:scale-105 font-poppins">Marketplace</Link>
+          <Link to="/planos" className="hover:text-ocean-500 transition-colors hover:scale-105 font-poppins">Planos</Link>
+          <Link to="/sobre" className="hover:text-ocean-500 transition-colors hover:scale-105 font-poppins">Sobre</Link>
         </div>
 
         {/* Search + Buttons Desktop */}
@@ -41,7 +42,9 @@ export default function Navbar() {
             {darkMode ? <FaSun size={20} className='text-dust-50' /> : <MdDarkMode  className='text-homem-1000' size={20} />}
           </Button>
 
-          <Button variant="primary" className="py-2 h-9 font-display bg-homem-400 hover:scale-105">Criar Conta</Button>
+          <Link to="/auth">
+            <Button variant="primary" className="py-2 h-9 font-display bg-homem-400 hover:scale-105">Criar Conta</Button>
+          </Link>
         </div>
 
         {/* Hamburger Menu Mobile */}
@@ -78,13 +81,15 @@ export default function Navbar() {
           >
             <div className="flex flex-col px-6 py-4 gap-4 text-dust-600 dark:text-gray-300">
              
-              <a href="/solucoes" className="hover:text-ocean-500 transition-colors">Soluções</a>
-              <a href="/marketplace" className="hover:text-ocean-500 transition-colors">Marketplace</a>
-              <a href="/planos" className="hover:text-ocean-500 transition-colors">Planos</a>
-              <a href="/sobre" className="hover:text-ocean-500 transition-colors">Sobre</a>
+              <Link to="/solucoes" className="hover:text-ocean-500 transition-colors">Soluções</Link>
+              <Link to="/marketplace" className="hover:text-ocean-500 transition-colors">Marketplace</Link>
+              <Link to="/planos" className="hover:text-ocean-500 transition-colors">Planos</Link>
+              <Link to="/sobre" className="hover:text-ocean-500 transition-colors">Sobre</Link>
               <div className="flex flex-col gap-2 mt-2">
             
-                <Button variant="primary" className="py-2 w-full">Criar Conta</Button>
+                <Link to="/auth">
+                  <Button variant="primary" className="py-2 w-full" >Criar Conta</Button>
+                </Link>
               </div>
             </div>
           </motion.div>

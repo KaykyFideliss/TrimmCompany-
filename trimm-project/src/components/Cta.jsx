@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from './UiComponents';
+import { Link } from 'react-router-dom';
 
 export default function Cta() {
   return (
@@ -15,7 +16,9 @@ export default function Cta() {
             Junte-se a milhares de profissionais que estão escalando seus negócios com a tecnologia Fivonn.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-             <Button variant="primary" className="px-8 py-4 text-lg rounded-full">Criar Conta Grátis</Button>
+             <Link to="/auth">
+               <Button variant="primary" className="px-8 py-4 text-lg rounded-full">Criar Conta Grátis</Button>
+             </Link>
              <Button variant="outline" className="px-8 py-4 text-lg rounded-full border-dust-700 text-white hover:bg-dust-800 hover:border-dust-600">
                Agendar Demo
              </Button>
